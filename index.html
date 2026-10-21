@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- ============================================================
+       BelajarYuk – Pusat Edukasi Alergi
+       File: index.html
+       Deskripsi: Struktur halaman (semantik HTML5).
+       Catatan: konten dinamis (kartu alergi, video) dirender oleh script.js
+       agar mudah diubah oleh pemula.
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta name="description"
+        content="BelajarYuk adalah pusat edukasi alergi: jenis-jenis alergi, ciri-ciri dan gejala, cara pencegahan, serta informasi golongan obat alergi. Bersifat edukatif, bukan pengganti konsultasi medis." />
+  <title>BelajarYuk – Pusat Edukasi Alergi</title>
+
+  <!-- Ikon situs (favicon) -->
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+
+  <!-- Font mudah dibaca dari Google Fonts (jika offline, otomatis memakai font sistem) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+  <!-- Stylesheet utama -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Tautan aksesibilitas: langsung ke konten utama saat menekan Tab -->
+  <a class="skip-link" href="#beranda">Lewati ke konten utama</a>
+
+  <!-- ======================= HEADER & NAVIGASI ======================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <!-- Logo sederhana: ikon kesehatan + nama website -->
+      <a class="brand" href="#beranda" aria-label="BelajarYuk, kembali ke beranda">
+        <img class="brand-logo" src="images/logo.svg" alt="Logo BelajarYuk berupa perisai dengan simbol kesehatan" width="44" height="44" />
+        <span class="brand-text">
+          <strong>BelajarYuk</strong>
+          <small>Pusat Edukasi Alergi</small>
+        </span>
+      </a>
+
+      <!-- Tombol menu untuk HP/tablet -->
+      <button class="nav-toggle" id="navToggle" type="button"
+              aria-expanded="false" aria-controls="primaryNav" aria-label="Buka menu navigasi">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <!-- Menu navigasi utama -->
+      <nav class="primary-nav" id="primaryNav" aria-label="Navigasi utama">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li><a class="nav-link" href="#jenis-alergi">Jenis Alergi</a></li>
+          <li><a class="nav-link" href="#ciri-ciri">Ciri-Ciri</a></li>
+          <li><a class="nav-link" href="#pencegahan">Pencegahan</a></li>
+          <li><a class="nav-link" href="#obat">Rekomendasi Obat</a></li>
+          <li><a class="nav-link" href="#video">Video Edukasi</a></li>
+          <li><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================ BERANDA ============================ -->
+    <section class="hero" id="beranda">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <span class="badge">🩺 Pusat Edukasi Alergi</span>
+          <h1>Kenali Alergi <span class="text-gradient">Sejak Dini</span></h1>
+          <p class="lead">
+            Alergi adalah reaksi sistem kekebalan tubuh terhadap zat yang bagi kebanyakan orang
+            tidak berbahaya, misalnya debu, makanan tertentu, atau sengatan serangga. Dengan
+            memahami pemicu dan gejalanya, kita dapat mengurangi risiko dan menangani reaksi
+            alergi dengan lebih tepat.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#jenis-alergi">Mulai Belajar</a>
+            <a class="btn btn-ghost" href="#ciri-ciri">Lihat Ciri-Cirinya</a>
+          </div>
+
+          <!-- Poin singkat pentingnya mengenal alergi -->
+          <ul class="hero-points">
+            <li><span class="dot-check" aria-hidden="true">✓</span> 8 jenis alergi umum beserta pemicunya</li>
+            <li><span class="dot-check" aria-hidden="true">✓</span> Gejala per sistem tubuh &amp; tanda darurat</li>
+            <li><span class="dot-check" aria-hidden="true">✓</span> Edukasi golongan obat alergi (bukan resep pribadi)</li>
+          </ul>
+        </div>
+
+        <div class="hero-art reveal">
+          <img src="images/hero.svg"
+               alt="Ilustrasi seseorang yang bersin karena alergi sambil memegang tisu, dengan partikel alergen di sekitarnya"
+               width="560" height="460" />
+          <div class="hero-float-card">
+            <strong>Kenali pemicunya</strong>
+            <span>Hindari → Cegah → Tangani dengan tepat</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ringkasan informasi tentang alergi -->
+      <div class="container">
+        <div class="summary-grid">
+          <article class="summary-card reveal">
+            <div class="summary-icon" aria-hidden="true">🧬</div>
+            <h2>Apa itu alergi?</h2>
+            <p>
+              Alergi terjadi ketika sistem kekebalan tubuh bereaksi berlebihan terhadap zat
+              tertentu (alergen). Reaksi bisa ringan seperti bersin, hingga berat seperti
+              sesak napas.
+            </p>
+          </article>
+          <article class="summary-card reveal">
+            <div class="summary-icon" aria-hidden="true">⚠️</div>
+            <h2>Mengapa penting?</h2>
+            <p>
+              Mengenali alergi lebih awal membantu mencegah reaksi berulang, menghindari
+              pencetus, dan mengetahui kapan harus segera mencari pertolongan medis.
+            </p>
+          </article>
+          <article class="summary-card reveal">
+            <div class="summary-icon" aria-hidden="true">📚</div>
+            <h2>Apa yang dipelajari?</h2>
+            <p>
+              Jenis alergi, ciri-ciri dan gejala, langkah pencegahan, serta gambaran umum
+              golongan obat alergi beserta peringatan penggunaannya.
+            </p>
+          </article>
+        </div>
+
+        <div class="cta-strip reveal">
+          <p>
+            Yuk pelajari satu per satu! Mulai dari jenis alergi, lalu kenali gejalanya, dan
+            ketahui langkah pencegahan yang bisa dilakukan sehari-hari.
+          </p>
+          <a class="btn btn-mint" href="#jenis-alergi">Pelajari Jenis Alergi</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= JENIS ALERGI ========================= -->
+    <section class="section" id="jenis-alergi">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">Bagian 1</span>
+          <h2 class="section-title">Jenis-Jenis Alergi</h2>
+          <p class="section-desc">
+            Delapan jenis alergi yang paling umum dijumpai. Gunakan pencarian atau filter
+            kategori untuk menemukan jenis alergi dengan cepat, lalu klik
+            <em>Pelajari Selengkapnya</em> untuk melihat pemicu, gejala, dan contoh
+            penanganannya.
+          </p>
+        </header>
+
+        <!-- Alat pencarian & filter kategori -->
+        <div class="toolbar reveal">
+          <div class="search-box">
+            <label class="sr-only" for="allergySearch">Cari jenis alergi</label>
+            <span class="search-icon" aria-hidden="true">🔍</span>
+            <input type="search" id="allergySearch" placeholder="Cari jenis alergi… (contoh: susu, debu)"
+                   autocomplete="off" />
+            <button type="button" class="search-clear" id="searchClear" aria-label="Hapus pencarian">✕</button>
+          </div>
+
+          <!-- Tombol filter: dibangun otomatis oleh JavaScript -->
+          <div class="filter-chips" id="filterChips" role="group" aria-label="Filter kategori alergi"></div>
+        </div>
+
+        <!-- Hasil jumlah kartu -->
+        <p class="result-count" id="resultCount" aria-live="polite"></p>
+
+        <!-- Grid kartu alergi (diisi oleh script.js) -->
+        <div class="card-grid" id="allergyGrid"></div>
+
+        <!-- Pesan jika hasil pencarian tidak ditemukan -->
+        <div class="empty-state" id="noResult" hidden>
+          <div class="empty-icon" aria-hidden="true">🔎</div>
+          <h3>Jenis alergi tidak ditemukan</h3>
+          <p>
+            Coba kata kunci lain (misalnya <strong>makanan</strong>, <strong>debu</strong>, atau
+            <strong>obat</strong>) atau tekan tombol “Semua” untuk melihat seluruh daftar.
+          </p>
+          <button class="btn btn-ghost" type="button" id="resetSearch">Tampilkan Semua Jenis Alergi</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CIRI-CIRI & GEJALA ====================== -->
+    <section class="section section-alt" id="ciri-ciri">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">Bagian 2</span>
+          <h2 class="section-title">Ciri-Ciri dan Gejala Alergi</h2>
+          <p class="section-desc">
+            Gejala alergi bisa muncul di berbagai bagian tubuh. Pilih kelompok sistem tubuh
+            di bawah ini untuk melihat gejalanya.
+          </p>
+        </header>
+
+        <!-- Tab kelompok gejala (dikelola oleh JavaScript) -->
+        <div class="tabs reveal">
+          <div class="tab-list" role="tablist" aria-label="Kelompok gejala alergi">
+            <button class="tab-btn" role="tab" id="tab-kulit" aria-controls="panel-kulit" aria-selected="true">Kulit</button>
+            <button class="tab-btn" role="tab" id="tab-pernapasan" aria-controls="panel-pernapasan" aria-selected="false">Pernapasan</button>
+            <button class="tab-btn" role="tab" id="tab-mata" aria-controls="panel-mata" aria-selected="false">Mata &amp; Hidung</button>
+            <button class="tab-btn" role="tab" id="tab-pencernaan" aria-controls="panel-pencernaan" aria-selected="false">Pencernaan</button>
+          </div>
+
+          <div class="tab-panels">
+            <div class="tab-panel" id="panel-kulit" role="tabpanel" aria-labelledby="tab-kulit" tabindex="0">
+              <h3>Gejala pada kulit</h3>
+              <ul class="symptom-list">
+                <li>Ruam kulit (kemerahan) pada area tertentu.</li>
+                <li>Biduran atau bentol yang terasa gatal.</li>
+                <li>Kulit kering, bersisik, atau terasa panas.</li>
+                <li>Pembengkakan pada bibir, wajah, atau kelopak mata.</li>
+              </ul>
+            </div>
+
+            <div class="tab-panel" id="panel-pernapasan" role="tabpanel" aria-labelledby="tab-pernapasan" tabindex="0" hidden>
+              <h3>Gejala pada saluran pernapasan</h3>
+              <ul class="symptom-list">
+                <li>Bersin berulang dan hidung berair.</li>
+                <li>Hidung tersumbat atau terasa gatal.</li>
+                <li>Batuk, tenggorokan gatal, atau suara serak.</li>
+                <li>Sesak napas atau mengi (napas berbunyi) pada reaksi yang berat.</li>
+              </ul>
+            </div>
+
+            <div class="tab-panel" id="panel-mata" role="tabpanel" aria-labelledby="tab-mata" tabindex="0" hidden>
+              <h3>Gejala pada mata</h3>
+              <ul class="symptom-list">
+                <li>Mata merah dan terasa gatal.</li>
+                <li>Mata berair berlebihan.</li>
+                <li>Kelopak mata bengkak atau terasa perih.</li>
+                <li>Mata terasa seperti berpasir atau sensitif terhadap cahaya.</li>
+              </ul>
+            </div>
+
+            <div class="tab-panel" id="panel-pencernaan" role="tabpanel" aria-labelledby="tab-pencernaan" tabindex="0" hidden>
+              <h3>Gejala pada saluran pencernaan</h3>
+              <ul class="symptom-list">
+                <li>Mual atau muntah setelah mengonsumsi pencetus tertentu.</li>
+                <li>Nyeri perut atau kram.</li>
+                <li>Diare.</li>
+                <li>Muncul bersamaan dengan gejala kulit atau pernapasan pada alergi makanan.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catatan penting: gejala tiap orang bisa berbeda -->
+        <div class="note-box reveal">
+          <h3>Catatan penting</h3>
+          <p>
+            Gejala alergi setiap orang dapat berbeda-beda, baik jenis, tingkat keparahan,
+            maupun waktu kemunculannya. Tidak semua keluhan seperti bersin, gatal, atau mual
+            pasti disebabkan oleh alergi — bisa juga karena infeksi, iritasi, atau kondisi
+            lain. Karena itu, pemeriksaan oleh tenaga kesehatan diperlukan untuk memastikan
+            penyebabnya.
+          </p>
+        </div>
+
+        <!-- Peringatan darurat -->
+        <div class="emergency-box reveal" role="alert">
+          <div class="emergency-icon" aria-hidden="true">🚨</div>
+          <div>
+            <h3>Tanda reaksi alergi berat — segera cari pertolongan medis darurat</h3>
+            <p>
+              Sesak napas, pembengkakan lidah atau tenggorokan, suara serak dan sulit menelan,
+              pusing berat atau pingsan, nyeri dada, atau reaksi yang menyebar cepat ke seluruh
+              tubuh dapat merupakan tanda <strong>anafilaksis</strong>. Segera hubungi layanan
+              gawat darurat setempat atau pergi ke fasilitas kesehatan terdekat. Jangan menunggu
+              gejala membaik dengan sendirinya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== PENCEGAHAN ========================== -->
+    <section class="section" id="pencegahan">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">Bagian 3</span>
+          <h2 class="section-title">Pencegahan Alergi</h2>
+          <p class="section-desc">
+            Cara paling efektif mengurangi risiko adalah mengenali dan menghindari pemicunya.
+            Centang langkah yang sudah Anda lakukan — kemajuan akan tersimpan otomatis di
+            peramban Anda.
+          </p>
+        </header>
+
+        <div class="prevention-layout">
+          <!-- Checklist pencegahan (diisi oleh script.js) -->
+          <div class="checklist-card reveal">
+            <div class="progress-wrap">
+              <div class="progress-info">
+                <span>Progres langkah pencegahan</span>
+                <strong id="progressText">0 dari 8</strong>
+              </div>
+              <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                   aria-valuenow="0" aria-label="Progres checklist pencegahan" id="progressBar">
+                <span class="progress-fill" id="progressFill"></span>
+              </div>
+            </div>
+
+            <ul class="checklist" id="preventionChecklist"></ul>
+
+            <div class="checklist-actions">
+              <button type="button" class="btn btn-ghost" id="resetChecklist">Reset Checklist</button>
+            </div>
+          </div>
+
+          <!-- Tips praktis -->
+          <div class="tips-column">
+            <article class="tip-card reveal">
+              <h3>🏠 Di rumah</h3>
+              <ul>
+                <li>Bersihkan kamar secara rutin, termasuk kasur dan selimut.</li>
+                <li>Cuci seprai dengan air hangat secara berkala.</li>
+                <li>Kurangi kelembapan dan barang-barang yang menumpuk debu.</li>
+              </ul>
+            </article>
+            <article class="tip-card reveal">
+              <h3>🧴 Saat memakai produk</h3>
+              <ul>
+                <li>Uji produk kosmetik baru pada area kecil kulit lebih dulu.</li>
+                <li>Hentikan pemakaian produk yang menimbulkan kemerahan atau gatal.</li>
+                <li>Baca komposisi dan hindari bahan yang pernah memicu reaksi.</li>
+              </ul>
+            </article>
+            <article class="tip-card reveal">
+              <h3>🍽️ Saat makan &amp; belanja</h3>
+              <ul>
+                <li>Baca label komposisi makanan sebelum membeli.</li>
+                <li>Beri tahu pelayan atau penjual tentang alergi Anda.</li>
+                <li>Waspadai kemungkinan kontaminasi silang saat memasak.</li>
+              </ul>
+            </article>
+            <article class="tip-card reveal">
+              <h3>👩‍⚕️ Saat berobat</h3>
+              <ul>
+                <li>Informasikan riwayat alergi obat kepada dokter atau apoteker.</li>
+                <li>Catat nama obat yang pernah menimbulkan reaksi.</li>
+                <li>Diskusikan rencana penanganan bila memiliki riwayat reaksi berat.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== REKOMENDASI OBAT ==================== -->
+    <section class="section section-alt" id="obat">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">Bagian 4</span>
+          <h2 class="section-title">Rekomendasi Obat &amp; Golongan Obat</h2>
+          <p class="section-desc">
+            Obat alergi dikelompokkan berdasarkan golongannya. Informasi berikut bersifat
+            <strong>edukatif</strong> untuk membantu Anda memahami fungsi dan peringatannya —
+            bukan anjuran memilih atau menggunakan obat tanpa pemeriksaan tenaga kesehatan.
+          </p>
+        </header>
+
+        <!-- Peringatan keamanan informasi obat -->
+        <div class="warning-box reveal">
+          <h3>Baca sebelum melanjutkan</h3>
+          <ul>
+            <li>Tidak ada satu obat yang cocok untuk semua jenis alergi. Pilihan obat bergantung pada jenis gejala, usia, kondisi kesehatan, kehamilan atau menyusui, penyakit penyerta, dan obat lain yang sedang digunakan.</li>
+            <li>Website ini <strong>tidak memberikan dosis individual</strong> dan tidak menjanjikan kesembuhan.</li>
+            <li>Antibiotik <strong>bukan</strong> obat alergi dan tidak digunakan untuk mengatasi alergi.</li>
+            <li>Kortikosteroid sistemik dan obat-obatan resep hanya boleh digunakan setelah pemeriksaan dan atas petunjuk tenaga kesehatan.</li>
+            <li>Informasi di halaman ini bukan pengganti diagnosis, pemeriksaan, atau konsultasi medis.</li>
+          </ul>
+        </div>
+
+        <!-- 4 golongan obat -->
+        <div class="drug-grid">
+
+          <!-- A. Antihistamin -->
+          <article class="drug-card reveal">
+            <header class="drug-head">
+              <span class="drug-letter" aria-hidden="true">A</span>
+              <div>
+                <h3>Antihistamin</h3>
+                <p class="drug-sub">Golongan obat yang paling umum dibahas untuk gejala alergi ringan</p>
+              </div>
+            </header>
+            <dl class="drug-detail">
+              <dt>Contoh zat aktif</dt>
+              <dd>Cetirizine, loratadine, fexofenadine (dan zat aktif lain dalam golongan yang sama).</dd>
+
+              <dt>Fungsi / kegunaan</dt>
+              <dd>Membantu meredakan gejala seperti bersin, hidung gatal atau berair, serta biduran dan gatal pada kulit.</dd>
+
+              <dt>Bentuk sediaan</dt>
+              <dd>Tablet, kaplet, sirup atau larutan oral (tersedia juga bentuk lain sesuai produk).</dd>
+
+              <dt>Efek samping yang perlu diketahui</dt>
+              <dd>Beberapa jenis dapat menyebabkan kantuk, mulut kering, atau pusing. Tingkat kantuk berbeda antar zat aktif dan antar orang.</dd>
+
+              <dt>Peringatan penggunaan</dt>
+              <dd>Hati-hati saat mengendarai kendaraan atau mengoperasikan mesin bila merasa mengantuk. Perhatikan kombinasi dengan obat lain yang juga menimbulkan kantuk.</dd>
+
+              <dt>Kapan perlu berkonsultasi</dt>
+              <dd>Jika gejala tidak membaik, sering kambuh, Anda sedang hamil atau menyusui, memiliki penyakit hati atau ginjal, atau sedang mengonsumsi obat rutin lainnya.</dd>
+            </dl>
+          </article>
+
+          <!-- B. Kortikosteroid -->
+          <article class="drug-card reveal">
+            <header class="drug-head">
+              <span class="drug-letter" aria-hidden="true">B</span>
+              <div>
+                <h3>Kortikosteroid</h3>
+                <p class="drug-sub">Bekerja mengurangi peradangan, tersedia dalam berbagai bentuk sediaan</p>
+              </div>
+            </header>
+            <dl class="drug-detail">
+              <dt>Contoh</dt>
+              <dd>Hidrokortison topikal untuk kondisi kulit tertentu, dan kortikosteroid intranasal seperti budesonide untuk gejala alergi hidung.</dd>
+
+              <dt>Fungsi / kegunaan</dt>
+              <dd>Membantu mengurangi peradangan, sesuai jenis sediaan dan kondisi yang ditangani.</dd>
+
+              <dt>Bentuk sediaan</dt>
+              <dd>Krim atau salep topikal (kulit) dan semprotan atau tetes hidung (intranasal).</dd>
+
+              <dt>Efek samping yang perlu diketahui</dt>
+              <dd>Pada pemakaian topikal dapat terjadi iritasi kulit; pada sediaan hidung dapat muncul rasa kering atau tidak nyaman. Efek samping bergantung pada kekuatan dan lama pemakaian.</dd>
+
+              <dt>Peringatan penggunaan</dt>
+              <dd>Kekuatan, cara pakai, dan lama pemakaian harus disesuaikan dengan kondisi serta petunjuk tenaga kesehatan. Penggunaan jangka panjang atau pada area tertentu memerlukan pengawasan. Hindari penggunaan bebas tanpa petunjuk pada area wajah dan kulit tipis.</dd>
+
+              <dt>Kapan perlu berkonsultasi</dt>
+              <dd>Sebelum memulai penggunaan, bila pemakaian sudah lama dan ingin dihentikan, bila muncul iritasi atau infeksi, serta pada anak-anak, kehamilan, atau penyakit tertentu.</dd>
+            </dl>
+          </article>
+
+          <!-- C. Dekongestan -->
+          <article class="drug-card reveal">
+            <header class="drug-head">
+              <span class="drug-letter" aria-hidden="true">C</span>
+              <div>
+                <h3>Dekongestan</h3>
+                <p class="drug-sub">Membantu meredakan hidung tersumbat pada kondisi tertentu</p>
+              </div>
+            </header>
+            <dl class="drug-detail">
+              <dt>Contoh zat aktif</dt>
+              <dd>Pseudoephedrine (oral) atau oxymetazoline (semprotan hidung).</dd>
+
+              <dt>Fungsi / kegunaan</dt>
+              <dd>Membantu meredakan hidung tersumbat dengan menyempitkan pembuluh darah di rongga hidung.</dd>
+
+              <dt>Bentuk sediaan</dt>
+              <dd>Tablet atau kapsul oral dan semprotan atau tetes hidung.</dd>
+
+              <dt>Efek samping yang perlu diketahui</dt>
+              <dd>Berdebar, gelisah, sulit tidur, sakit kepala, atau peningkatan tekanan darah. Penggunaan semprotan hidung berlebihan dapat menimbulkan hidung tersumbat kembali (rebound).</dd>
+
+              <dt>Peringatan penggunaan</dt>
+              <dd>Obat ini <strong>tidak mengatasi penyebab alergi</strong>, hanya meredakan salah satu gejalanya. Ada batasan lama penggunaan, terutama untuk sediaan hidung. Kontraindikasi dan kehati-hatian berlaku pada hipertensi tidak terkontrol, gangguan jantung, hipertiroid, diabetes, serta kehamilan.</dd>
+
+              <dt>Kapan perlu berkonsultasi</dt>
+              <dd>Pada hipertensi, penyakit jantung, kelenjar tiroid, diabetes, kehamilan atau menyusui, penggunaan bersamaan dengan obat lain, dan bila hidung tersumbat berlangsung lama.</dd>
+            </dl>
+          </article>
+
+          <!-- D. Obat untuk reaksi alergi berat -->
+          <article class="drug-card drug-card-urgent reveal">
+            <header class="drug-head">
+              <span class="drug-letter" aria-hidden="true">D</span>
+              <div>
+                <h3>Obat untuk Reaksi Alergi Berat</h3>
+                <p class="drug-sub">Pertolongan awal pada anafilaksis — obat resep</p>
+              </div>
+            </header>
+            <dl class="drug-detail">
+              <dt>Contoh</dt>
+              <dd>Epinefrin (adrenalin).</dd>
+
+              <dt>Fungsi / kegunaan</dt>
+              <dd>Merupakan pertolongan utama pada anafilaksis bagi orang yang telah diresepkan obat tersebut oleh tenaga kesehatan.</dd>
+
+              <dt>Bentuk sediaan</dt>
+              <dd>Injeksi atau auto-injector sesuai resep dan penyedia layanan kesehatan.</dd>
+
+              <dt>Efek samping yang perlu diketahui</dt>
+              <dd>Dapat menimbulkan berdebar, gemetar, pusing, atau pucat. Pada kondisi anafilaksis, manfaat penanganan segera jauh lebih penting dibandingkan risikonya.</dd>
+
+              <dt>Peringatan penggunaan</dt>
+              <dd>Penggunaan harus sesuai resep dan pelatihan dari tenaga kesehatan. Setelah penyuntikan, <strong>segera cari pertolongan medis darurat</strong> karena gejala dapat berulang. Jangan mengandalkan obat ini sebagai pengganti pertolongan medis.</dd>
+
+              <dt>Kapan perlu berkonsultasi</dt>
+              <dd>Diskusikan bersama dokter bila memiliki riwayat reaksi alergi berat: cara penggunaan, kapan dipakai, dan rencana penanganan darurat.</dd>
+            </dl>
+          </article>
+        </div>
+
+        <p class="disclaimer-inline reveal">
+          ℹ️ Informasi obat pada halaman ini bersifat edukatif dan umum, bukan pengganti
+          diagnosis atau konsultasi medis. Selalu tanyakan kepada dokter atau apoteker
+          mengenai obat yang aman untuk kondisi Anda.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================= VIDEO EDUKASI ========================= -->
+    <section class="section" id="video">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">Bagian 5</span>
+          <h2 class="section-title">Video Edukasi</h2>
+          <p class="section-desc">
+            Kumpulan topik video pendukung pembelajaran. Pemutar video menggunakan embed
+            YouTube yang responsif.
+          </p>
+        </header>
+
+        <!-- Keterangan cara mengisi video -->
+        <div class="note-box note-box-soft reveal">
+          <h3>Cara mengisi video</h3>
+          <p>
+            Tautan video sengaja <strong>dibiarkan kosong</strong> agar tidak ada tautan palsu.
+            Buka <em>“Atur tautan video”</em> pada tiap kartu, tempelkan URL YouTube dari sumber
+            tepercaya (misalnya kanal resmi Kementerian Kesehatan RI, WHO, atau fasilitas
+            kesehatan terverifikasi), lalu klik <strong>Muat Video</strong>. Tautan tersimpan di
+            peramban Anda, sehingga tetap ada saat halaman dibuka kembali.
+          </p>
+        </div>
+
+        <!-- Daftar video (diisi oleh script.js) -->
+        <div class="video-grid" id="videoGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============================ KONTAK ============================ -->
+    <section class="section section-alt" id="kontak">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">Bagian 6</span>
+          <h2 class="section-title">Hubungi BelajarYuk</h2>
+          <p class="section-desc">
+            Punya pertanyaan, saran, atau masukan mengenai materi edukasi di website ini?
+            Silakan kirimkan melalui formulir di bawah.
+          </p>
+        </header>
+
+        <div class="contact-layout">
+          <!-- Formulir kontak -->
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="nama">Nama <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="nama" name="nama" placeholder="Nama Anda" autocomplete="name" />
+              <small class="error-msg" id="errorNama" role="alert"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="nama@email.com" autocomplete="email" />
+              <small class="error-msg" id="errorEmail" role="alert"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="subjek">Subjek <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="subjek" name="subjek" placeholder="Contoh: Pertanyaan tentang alergi debu" />
+              <small class="error-msg" id="errorSubjek" role="alert"></small>
+            </div>
+
+            <div class="form-row">
+              <label for="pesan">Pesan <span class="required" aria-hidden="true">*</span></label>
+              <textarea id="pesan" name="pesan" rows="6" placeholder="Tuliskan pertanyaan atau saran Anda di sini…"></textarea>
+              <small class="error-msg" id="errorPesan" role="alert"></small>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit" id="submitBtn">Kirim Pesan</button>
+
+            <!-- Area pesan hasil pengiriman (diisi JavaScript) -->
+            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+            <p class="form-note">
+              Formulir ini merupakan sarana pertanyaan edukatif, <strong>bukan</strong> layanan
+              diagnosis, konsultasi medis, atau penanganan darurat. Untuk keluhan kesehatan,
+              hubungi dokter atau fasilitas kesehatan terdekat.
+            </p>
+          </form>
+
+          <!-- Informasi kontak (placeholder, mudah diganti) -->
+          <aside class="contact-info reveal">
+            <h3>Informasi Kontak</h3>
+            <p class="muted">
+              Data di bawah ini masih berupa <strong>placeholder</strong>. Silakan ganti dengan
+              informasi resmi Anda pada file <code>index.html</code>.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <span class="ci-icon" aria-hidden="true">✉️</span>
+                <div>
+                  <strong>Email</strong>
+                  <span class="placeholder-text">[isi-email-anda@contoh.ac.id]</span>
+                </div>
+              </li>
+              <li>
+                <span class="ci-icon" aria-hidden="true">🏫</span>
+                <div>
+                  <strong>Institusi / Pengelola</strong>
+                  <span class="placeholder-text">[Nama Program Studi / Institusi Anda]</span>
+                </div>
+              </li>
+              <li>
+                <span class="ci-icon" aria-hidden="true">🕒</span>
+                <div>
+                  <strong>Waktu respons</strong>
+                  <span class="placeholder-text">[Contoh: 2–3 hari kerja]</span>
+                </div>
+              </li>
+              <li>
+                <span class="ci-icon" aria-hidden="true">🚑</span>
+                <div>
+                  <strong>Keadaan darurat</strong>
+                  <span>Segera hubungi layanan gawat darurat setempat atau fasilitas kesehatan terdekat.</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="emergency-mini">
+              <strong>Ingat:</strong> jika terjadi sesak napas, pembengkakan lidah atau
+              tenggorokan, atau pingsan setelah terpapar alergen, ini merupakan keadaan darurat.
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================= FOOTER ============================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img ="images/logo.svg" alt="" width="40" height="40" />
+        <div>
+          <strong>BelajarYuk</strong>
+          <span>Pusat Edukasi Alergi</span>
+        </div>
+        <p class="footer-tagline">“Kenali Alergi, Jaga Diri, Hidup Lebih Sehat!”</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navigasi footer">
+        <h3>Navigasi</h3>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#jenis-alergi">Jenis Alergi</a></li>
+          <li><a href="#ciri-ciri">Ciri-Ciri</a></li>
+          <li><a href="#pencegahan">Pencegahan</a></li>
+          <li><a href="#obat">Rekomendasi Obat</a></li>
+          <li><a href="#video">Video Edukasi</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-note">
+        <h3>Disclaimer</h3>
+        <p>
+          Informasi pada website ini ditujukan untuk edukasi kesehatan dan tidak menggantikan
+          diagnosis, pemeriksaan, atau saran dari tenaga kesehatan.
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <!-- Tahun diperbarui otomatis oleh JavaScript -->
+      <p>&copy; <span id="year">2026</span> BelajarYuk – Pusat Edukasi Alergi. Dibuat untuk keperluan edukasi.</p>
+    </div>
+  </footer>
+
+  <!-- Tombol kembali ke atas -->
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
+
+  <!-- ===================== MODAL DETAIL ALERGI ===================== -->
+  <div class="modal" id="allergyModal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" id="modalClose" aria-label="Tutup detail alergi">✕</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Isi modal dibuat oleh script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Script utama -->
+  <script src="script.js"></script>
+</body>
+</html>
