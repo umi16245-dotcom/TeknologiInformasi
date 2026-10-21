@@ -540,6 +540,9 @@ code {
    -------------------------------------------------------------------------- */
 .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
 
+/* Bila hanya tersisa satu kartu video, lebarnya dibatasi agar tetap proporsional */
+.video-grid.is-single { max-width: 880px; margin-inline: auto; }
+
 .video-card {
   background: var(--white); border: 1px solid var(--blue-100);
   border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm);
@@ -547,6 +550,11 @@ code {
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .video-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+
+/* Kartu video utama: tampil melebar memenuhi baris agar lebih menonjol */
+.video-card-featured { grid-column: 1 / -1; }
+.video-card-featured .video-body h3 { font-size: 1.3rem; }
+.video-card-featured .video-body p { font-size: .95rem; }
 
 .video-frame { position: relative; aspect-ratio: 16 / 9; background: var(--blue-100); }
 .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
@@ -736,4 +744,3 @@ code {
   body { color: #000; }
   .reveal { opacity: 1; transform: none; }
 }
-

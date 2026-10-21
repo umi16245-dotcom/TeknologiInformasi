@@ -57,7 +57,7 @@ const daftarAlergi = [
     id: 'makanan',
     nama: 'Alergi Makanan',
     kategori: 'Makanan',
-    gambar: 'images/alergi-makanan.svg',
+    gambar: 'images/makanan.jpg.jpeg',
     ringkas: 'Reaksi sistem kekebalan tubuh terhadap protein tertentu dalam makanan, seperti telur, kacang, atau bahan makanan lainnya.',
     pemicu: ['Telur dan produk olahannya', 'Kacang tanah dan kacang pohon', 'Gandum dan kedelai', 'Bahan tambahan atau pengawet tertentu'],
     gejala: ['Gatal atau kemerahan di mulut dan sekitar bibir', 'Biduran dan gatal pada kulit', 'Mual, muntah, atau diare', 'Sesak napas pada reaksi berat'],
@@ -68,7 +68,7 @@ const daftarAlergi = [
     id: 'susu',
     nama: 'Alergi Susu',
     kategori: 'Makanan',
-    gambar: 'images/alergi-susu.svg',
+    gambar: 'images/susu.jpg.jpeg',
     ringkas: 'Reaksi sistem kekebalan tubuh terhadap protein susu, umumnya protein susu sapi dan produk turunannya.',
     pemicu: ['Susu sapi dan susu hewan lainnya', 'Keju, mentega, dan yoghurt', 'Produk olahan yang mengandung susu (kue, cokelat, saus)', 'Makanan yang diproses di fasilitas yang juga mengolah susu'],
     gejala: ['Biduran atau ruam gatal setelah minum atau makan produk susu', 'Mual, muntah, atau diare', 'Kembung dan nyeri perut', 'Sesak napas atau mengi pada reaksi berat'],
@@ -79,7 +79,7 @@ const daftarAlergi = [
     id: 'seafood',
     nama: 'Alergi Seafood',
     kategori: 'Makanan',
-    gambar: 'images/alergi-seafood.svg',
+    gambar: 'images/seafood.jpg.jpg',
     ringkas: 'Reaksi alergi terhadap makanan laut seperti udang, kepiting, kerang, cumi, dan ikan tertentu.',
     pemicu: ['Udang, kepiting, dan lobster', 'Kerang, tiram, dan cumi-cumi', 'Ikan tertentu', 'Kaldu, saus, atau bumbu berbahan dasar makanan laut'],
     gejala: ['Biduran dan gatal menyeluruh', 'Pembengkakan pada bibir, wajah, atau kelopak mata', 'Mual, kram perut, atau diare', 'Sesak napas atau mengi'],
@@ -90,7 +90,7 @@ const daftarAlergi = [
     id: 'obat',
     nama: 'Alergi Obat',
     kategori: 'Obat',
-    gambar: 'images/alergi-obat.svg',
+    gambar: 'images/obat jpg.jpeg',
     ringkas: 'Reaksi sistem kekebalan tubuh terhadap zat aktif atau bahan tambahan dalam obat tertentu.',
     pemicu: ['Golongan antibiotik tertentu (misalnya penisilin) sesuai riwayat masing-masing', 'Obat pereda nyeri tertentu', 'Obat antikejang tertentu', 'Bahan tambahan atau pewarna pada sediaan obat'],
     gejala: ['Ruam kulit yang muncul setelah minum obat', 'Biduran dan gatal', 'Pembengkakan pada wajah, bibir, atau lidah', 'Sesak napas, demam, atau kelainan darah pada reaksi berat'],
@@ -101,7 +101,7 @@ const daftarAlergi = [
     id: 'debu',
     nama: 'Alergi Debu',
     kategori: 'Lingkungan',
-    gambar: 'images/alergi-debu.svg',
+    gambar: 'images/debu.jpg.jpeg',
     ringkas: 'Reaksi terhadap alergen yang terdapat pada debu rumah, terutama tungau debu, serpihan kulit, dan bulu hewan mikroskopis.',
     pemicu: ['Tungau debu pada kasur, bantal, dan selimut', 'Debu yang menumpuk pada karpet, gorden, atau rak', 'Sisa serpihan kulit manusia dan hewan', 'Kelembapan ruangan yang tinggi'],
     gejala: ['Bersin berulang dan hidung berair', 'Hidung tersumbat atau gatal', 'Mata merah, gatal, dan berair', 'Batuk atau mengi, terutama pada penderita asma'],
@@ -112,7 +112,7 @@ const daftarAlergi = [
     id: 'hewan',
     nama: 'Alergi Hewan',
     kategori: 'Lingkungan',
-    gambar: 'images/alergi-hewan.svg',
+    gambar: 'images/hewan.jpg.jpg',
     ringkas: 'Reaksi terhadap alergen dari serpihan kulit, air liur, atau urine hewan berbulu seperti kucing dan anjing.',
     pemicu: ['Serpihan kulit (dander) kucing dan anjing', 'Air liur hewan yang menempel pada bulu', 'Urine hewan, terutama pada hewan pengerat', 'Bulu atau serat hewan pada perabot dan pakaian'],
     gejala: ['Bersin dan hidung berair setelah dekat hewan', 'Mata gatal dan berair', 'Ruam atau biduran pada kulit yang tersentuh', 'Sesak napas atau mengi pada orang dengan asma'],
@@ -123,7 +123,7 @@ const daftarAlergi = [
     id: 'kosmetik',
     nama: 'Alergi Kosmetik',
     kategori: 'Produk',
-    gambar: 'images/alergi-kosmetik.svg',
+    gambar: 'images/kosmetik.jpg.jpeg',
     ringkas: 'Reaksi terhadap bahan tertentu dalam produk kosmetik atau perawatan kulit, seperti pewangi, pengawet, atau pewarna.',
     pemicu: ['Parfum dan pewangi sintetis', 'Pengawet tertentu pada krim dan losion', 'Pewarna dan bahan aktif tertentu', 'Produk perawatan kuku atau rambut'],
     gejala: ['Kemerahan dan rasa terbakar pada area pemakaian', 'Gatal, kulit kering, atau bersisik', 'Bentol kecil atau ruam yang meluas', 'Kelopak mata bengkak bila produk terkena area mata'],
@@ -134,7 +134,7 @@ const daftarAlergi = [
     id: 'serangga',
     nama: 'Alergi Gigitan atau Sengatan Serangga',
     kategori: 'Serangga',
-    gambar: 'images/alergi-serangga.svg',
+    gambar: 'images/serangga.jpg.jpeg',
     ringkas: 'Reaksi terhadap racun atau zat yang masuk ketika serangga menyengat atau menggigit, seperti lebah, tawon, dan semut api.',
     pemicu: ['Sengatan lebah, tawon, atau tabuhan', 'Gigitan semut api', 'Gigitan nyamuk pada orang dengan sensitivitas tertentu', 'Gigitan serangga lain yang meninggalkan zat tertentu di kulit'],
     gejala: ['Nyeri, kemerahan, dan bengkak pada lokasi sengatan', 'Biduran dan gatal yang menyebar', 'Pembengkakan pada wajah, bibir, atau tenggorokan', 'Sesak napas, pusing, atau pingsan pada reaksi berat'],
@@ -144,7 +144,7 @@ const daftarAlergi = [
 ];
 
 /* ==========================================================================
-   BAGIAN 2 –  KARTU ALERGI, PENCARIAN, DAN FILTER
+   BAGIAN 2 – RENDER KARTU ALERGI, PENCARIAN, DAN FILTER
    ========================================================================== */
 const allergyGrid = document.getElementById('allergyGrid');
 const allergySearch = document.getElementById('allergySearch');
@@ -221,7 +221,9 @@ function buatFilterKategori() {
   filterChips.innerHTML = kategori
     .map(
       (kat) =>
-        `<button class="chip${kat === 'Semua' ? ' is-active' : ''}" type="button" data-kategori="${kat}">${kat}</button>`
+        // aria-pressed membantu pengguna pembaca layar mengetahui filter yang sedang aktif
+        `<button class="chip${kat === 'Semua' ? ' is-active' : ''}" type="button" data-kategori="${kat}"
+                 aria-pressed="${kat === 'Semua'}">${kat}</button>`
     )
     .join('');
 }
@@ -246,9 +248,13 @@ filterChips.addEventListener('click', (event) => {
 
   kategoriAktif = tombol.dataset.kategori;
 
-  // Perbarui tampilan tombol filter
-  filterChips.querySelectorAll('.chip').forEach((chip) => chip.classList.remove('is-active'));
+  // Perbarui tampilan tombol filter (kelas untuk gaya, aria-pressed untuk aksesibilitas)
+  filterChips.querySelectorAll('.chip').forEach((chip) => {
+    chip.classList.remove('is-active');
+    chip.setAttribute('aria-pressed', 'false');
+  });
   tombol.classList.add('is-active');
+  tombol.setAttribute('aria-pressed', 'true');
 
   tampilkanAlergi();
 });
@@ -259,7 +265,9 @@ resetSearchBtn.addEventListener('click', () => {
   kataKunci = '';
   kategoriAktif = 'Semua';
   filterChips.querySelectorAll('.chip').forEach((chip) => {
-    chip.classList.toggle('is-active', chip.dataset.kategori === 'Semua');
+    const aktif = chip.dataset.kategori === 'Semua';
+    chip.classList.toggle('is-active', aktif);
+    chip.setAttribute('aria-pressed', String(aktif));
   });
   tampilkanAlergi();
 });
@@ -434,40 +442,19 @@ resetChecklistBtn.addEventListener('click', () => {
 /* ==========================================================================
    BAGIAN 6 – VIDEO EDUKASI (EMBED YOUTUBE RESPONSIF)
    --------------------------------------------------------------------------
-   Tautan video dibiarkan kosong terlebih dahulu (tidak membuat tautan palsu).
-   Pengguna dapat menempelkan URL YouTube pada tiap kartu dan tautan akan
-   tersimpan di peramban.
+   Video utama ("Mengenal dan Menangani Alergi") sudah terisi tautannya dan
+   langsung dapat diputar. Kartu video lain masih kosong agar tidak ada
+   tautan palsu. URL yang dimasukkan pengguna tersimpan di peramban.
    ========================================================================== */
 const daftarVideo = [
   {
     id: 'video-1',
-    judul: 'Apa Itu Alergi?',
-    deskripsi: 'Penjelasan dasar mengenai alergi, cara kerja sistem kekebalan tubuh, dan mengapa reaksi alergi bisa muncul.',
-    rekomendasi: 'Cari kanal resmi Kementerian Kesehatan RI atau fasilitas kesehatan terverifikasi.'
-  },
-  {
-    id: 'video-2',
-    judul: 'Mengenali Gejala Alergi Sejak Dini',
-    deskripsi: 'Mengenal tanda dan gejala alergi pada kulit, saluran pernapasan, mata, dan pencernaan, serta kapan harus waspada.',
-    rekomendasi: 'Pilih video dari dokter atau institusi kesehatan yang kredibel.'
-  },
-  {
-    id: 'video-3',
-    judul: 'Macam-Macam Alergi dan Pemicu Umumnya',
-    deskripsi: 'Ulasan pemicu alergi sehari-hari: makanan, debu, hewan, obat, kosmetik, hingga sengatan serangga.',
-    rekomendasi: 'Gunakan video edukasi dari kanal rumah sakit atau lembaga kesehatan.'
-  },
-  {
-    id: 'video-4',
-    judul: 'Cara Mencegah dan Mengurangi Paparan Alergen',
-    deskripsi: 'Langkah praktis di rumah dan di luar rumah untuk mengurangi paparan alergen dan mencegah reaksi berulang.',
-    rekomendasi: 'Cari video dengan narasumber tenaga kesehatan.'
-  },
-  {
-    id: 'video-5',
-    judul: 'Mengenal Golongan Obat Alergi',
-    deskripsi: 'Gambaran umum golongan obat alergi: antihistamin, kortikosteroid, dekongestan, dan obat untuk reaksi berat.',
-    rekomendasi: 'Utamakan video dari apoteker, dokter, atau institusi resmi.'
+    judul: 'Mengenal dan Menangani Alergi',
+    deskripsi: 'Video edukasi utama: mengenal apa itu alergi, pemicu yang umum, gejala yang perlu diwaspadai, serta langkah awal penanganannya.',
+    // Tautan video utama sudah terisi dan siap diputar.
+    url: 'https://youtu.be/1OFeha6hqdo',
+    unggulan: true,
+    rekomendasi: 'Ingin memakai video lain? Tempelkan tautan YouTube dari sumber kesehatan tepercaya di atas, lalu klik Muat Video.'
   }
 ];
 
@@ -490,19 +477,23 @@ function ambilIdYoutube(url) {
 }
 
 /** Merender seluruh kartu video. */
-function renderVideo(https://youtu.be/1OFeha6hqdo?si=gpDlnHyrZbyquCCp) {
+function renderVideo() {
   const simpanan = storage.get('belajaryuk-video', {});
+
+  // Bila hanya ada satu kartu video, tampilkan lebih rapi (tidak melebar penuh)
+  videoGrid.classList.toggle('is-single', daftarVideo.length === 1);
 
   videoGrid.innerHTML = daftarVideo
     .map((video, index) => {
-      const url = simpanan[video.id] || '';
+      // Prioritas: tautan yang disimpan pengguna → tautan bawaan pada data → kosong
+      const url = simpanan[video.id] || video.url || '';
       return `
-      <article class="video-card reveal">
+      <article class="video-card reveal${video.unggulan ? ' video-card-featured' : ''}">
         <div class="video-frame" id="frame-${video.id}">
           ${buatIsiFrame(url, video.judul)}
         </div>
         <div class="video-body">
-          <span class="video-num">Video ${index + 1}</span>
+          <span class="video-num">${video.unggulan ? 'Video Utama' : `Video ${index}`}</span>
           <h3>${video.judul}</h3>
           <p>${video.deskripsi}</p>
 
@@ -514,7 +505,7 @@ function renderVideo(https://youtu.be/1OFeha6hqdo?si=gpDlnHyrZbyquCCp) {
                      placeholder="https://www.youtube.com/watch?v=..." value="${url}" />
               <div class="video-setup-actions">
                 <button class="btn btn-primary btn-sm" type="button" data-video-save="${video.id}">Muat Video</button>
-                <button class="btn btn-ghost btn-sm" type="button" data-video-reset="${video.id}">Kosongkan</button>
+                <button class="btn btn-ghost btn-sm" type="button" data-video-reset="${video.id}">Reset</button>
               </div>
               <p class="video-hint">${video.rekomendasi}</p>
             </div>
@@ -546,9 +537,7 @@ function buatIsiFrame(url, judul) {
     </div>`;
 }
 
-eo', {});
-    simpanan[id] = url;
-    storage.set('belajaryuk-video', simpanan);// Menyimpan URL video yang dimasukkan pengguna
+// Menyimpan URL video yang dimasukkan pengguna
 videoGrid.addEventListener('click', (event) => {
   const tombolSimpan = event.target.closest('[data-video-save]');
   const tombolReset = event.target.closest('[data-video-reset]');
@@ -564,7 +553,9 @@ videoGrid.addEventListener('click', (event) => {
       return;
     }
 
-    const simpanan = storage.get('belajaryuk-vid
+    const simpanan = storage.get('belajaryuk-video', {});
+    simpanan[id] = url;
+    storage.set('belajaryuk-video', simpanan);
 
     document.getElementById(`frame-${id}`).innerHTML = buatIsiFrame(url, video.judul);
   }
@@ -576,8 +567,10 @@ videoGrid.addEventListener('click', (event) => {
     delete simpanan[id];
     storage.set('belajaryuk-video', simpanan);
 
-    document.getElementById(`input-${id}`).value = '';
-    document.getElementById(`frame-${id}`).innerHTML = buatIsiFrame('', video.judul);
+    // Kembalikan ke tautan bawaan (bila ada) atau kosongkan pemutar
+    const urlBawaan = video.url || '';
+    document.getElementById(`input-${id}`).value = urlBawaan;
+    document.getElementById(`frame-${id}`).innerHTML = buatIsiFrame(urlBawaan, video.judul);
   }
 });
 
